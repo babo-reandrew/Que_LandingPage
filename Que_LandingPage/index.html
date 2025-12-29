@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Que - Ai Calendar App</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff" rel="preload" as="font" type="font/woff" crossorigin>
+    <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff" rel="preload" as="font" type="font/woff" crossorigin>
+    <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff" rel="preload" as="font" type="font/woff" crossorigin>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <!-- Logo -->
+            <a href="#" class="header__logo">
+                <img src="assets/logo.png" alt="Que Logo" class="header__logo-img">
+            </a>
+            
+            <!-- Navigation -->
+            <nav class="header__nav">
+                <a href="#design-system" class="header__nav-link" data-i18n="nav.designSystem">Design System</a>
+            </nav>
+            
+            <!-- Language Selector -->
+            <div class="header__lang">
+                <button class="header__lang-btn header__lang-btn--active" data-lang="KOR">KOR</button>
+                <span class="header__lang-divider"></span>
+                <button class="header__lang-btn" data-lang="JPN">JPN</button>
+                <span class="header__lang-divider"></span>
+                <button class="header__lang-btn" data-lang="ENG">ENG</button>
+            </div>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="header__menu-btn" aria-label="Menu">
+                <img src="assets/hamberget_menu.svg" alt="Menu" class="header__menu-icon-img">
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-overlay__inner">
+            <!-- Close Button -->
+            <button class="mobile-menu-overlay__close" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#ACB0C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#ACB0C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            
+            <!-- Menu Navigation -->
+            <nav class="mobile-menu-overlay__nav">
+                <a href="#hero" class="mobile-menu-overlay__link" data-i18n="nav.home">Home</a>
+                <a href="#design-system" class="mobile-menu-overlay__link" data-i18n="nav.designSystem">Design System</a>
+            </nav>
+            
+            <!-- Language Selector -->
+            <div class="mobile-menu-overlay__lang">
+                <button class="mobile-menu-overlay__lang-btn mobile-menu-overlay__lang-btn--active" data-lang="KOR">KOR</button>
+                <span class="mobile-menu-overlay__lang-divider"></span>
+                <button class="mobile-menu-overlay__lang-btn" data-lang="JPN">JPN</button>
+                <span class="mobile-menu-overlay__lang-divider"></span>
+                <button class="mobile-menu-overlay__lang-btn" data-lang="ENG">ENG</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         HERO SECTION
+    ========================================= -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero__content">
+                <!-- Group 17142 -->
+                <div class="hero__brand">
+                    <img src="assets/Firstview_logo.png" alt="que" class="hero__logo-img">
+                </div>
+                
+                <!-- Frame 21 -->
+                <div class="hero__info">
+                    <!-- Frame 18 - AIカレンダー Badge -->
+                    <div class="hero__badge">
+                        <span data-i18n="hero.badge">AIカレンダー</span>
+                    </div>
+                    
+                    <!-- Frame 20 -->
+                    <div class="hero__text">
+                        <h2 class="hero__subtitle" data-i18n="hero.subtitle">私が使った時間を、より価値ある時間へ</h2>
+                        <p class="hero__description" data-i18n="hero.description">
+                            様々なアプリや紙に散らばった記録を集め、<br>
+                            あなたの時間を価値あるものにします。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Frame 1 - App Store Button -->
+                <a href="#" class="btn-3d btn-3d--dark hero__download">
+                    <div class="btn-3d__shadow"></div>
+                    <div class="btn-3d__content">
+                        <svg class="btn-3d__icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                        </svg>
+                        <span class="btn-3d__text">App Store</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="hero__visual">
+                <div class="hero__phones">
+                    <img src="assets/first_view_appScreen.png" alt="Que App" class="hero__phone-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FEATURE 1: INPUT
+    ========================================= -->
+    <section class="feature feature--left" id="feature-record">
+        <div class="container">
+            <div class="feature__visual">
+                <div class="feature__phone">
+                    <video class="feature__video" autoplay loop muted playsinline>
+                        <source src="assets/QueLanding1.mp4_com.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="feature__content">
+                <span class="feature__label" data-i18n="feature1.label">Input</span>
+                <h3 class="feature__title" data-i18n="feature1.title">何でも撮影して、<br>追加してみてください</h3>
+                <p class="feature__subtitle" data-i18n="feature1.subtitle">"入力の煩わしさを解消しました"</p>
+                <p class="feature__description" data-i18n="feature1.description">
+                    手書きのメモや、キャプチャした予定……もう書き写すのに時間を費や<br>
+                    すのはやめましょう。何でもそのまま放り込んでください。AIが画像内<br>
+                    のテキストと文脈を理解し、スケジュール・タスク・習慣へと完璧に分<br>
+                    類して整理します。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FEATURE 2: PRIORITY
+    ========================================= -->
+    <section class="feature feature--right" id="feature-recognition">
+        <div class="container">
+            <div class="feature__content">
+                <span class="feature__label" data-i18n="feature2.label">Priority</span>
+                <h3 class="feature__title" data-i18n="feature2.title">迷うのはもうやめて。<br>先に把握します</h3>
+                <p class="feature__subtitle" data-i18n="feature2.subtitle">"優先順位、あなたの代わりに把握します"</p>
+                <p class="feature__description" data-i18n="feature2.description">
+                    「何から始めよう？」と迷うエネルギーさえ節約しましょう。あなたの<br>
+                    過去のパターンと重要度を分析し、今すぐやるべきことを順番に表示し<br>
+                    ます。あなたはただ実行"する"だけ。
+                </p>
+            </div>
+            <div class="feature__visual">
+                <div class="feature__phone">
+                    <video class="feature__video" autoplay loop muted playsinline>
+                        <source src="assets/QueLanding2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FEATURE 3: MOVING QUEUE
+    ========================================= -->
+    <section class="feature feature--left" id="feature-moving" data-scroll-animate="true">
+        <div class="container">
+            <div class="feature__visual">
+                <div class="feature__phone">
+                    <video class="feature__video" autoplay loop muted playsinline>
+                        <source src="assets/QueLanding3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="feature__content">
+                <span class="feature__label" data-i18n="feature3.label">Metacognition</span>
+                <h3 class="feature__title" data-i18n="feature3.title">思いがけない自分の発見を、<br>移動中に声で。</h3>
+                <p class="feature__subtitle" data-i18n="feature3.subtitle">"これは気づかなかったでしょ？　記録に隠れたパターンの発見です。"</p>
+                <p class="feature__description" data-i18n="feature3.description">
+                    移動中、「何をしてたっけ？」と気になる瞬間はありませんか？<br>
+                    Queはあなたの蓄積データを分析し、主要なパターン、持続時間、重要度<br>
+                    を音声で伝えます。運転中や歩いている最中でも、実行可能な洞察を<br>
+                    届けます。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CALENDAR SECTION
+    ========================================= -->
+    <section class="calendar" id="calendar">
+        <div class="calendar__container">
+            <div class="calendar__card"></div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         BANNER VIDEO SECTION
+    ========================================= -->
+    <section class="banner" id="banner">
+        <div class="banner__gradient-top"></div>
+        <div class="banner__overlay"></div>
+        <div class="banner__video-container">
+            <video class="banner__video" autoplay muted loop playsinline>
+                <source src="assets/Que_landing1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="banner__gradient-bottom"></div>
+    </section>
+
+    <!-- ========================================
+         ABOUT SECTION
+    ========================================= -->
+    <section class="about" id="about">
+        <div class="container">
+            <!-- Left Group -->
+            <div class="about__left-group">
+                <h2 class="about__heading" data-i18n="about.heading">私たちは</h2>
+                <div class="about__logo">
+                    <img src="./assets/Que_Logo.png" alt="Que" class="about__logo-img">
+                </div>
+                <!-- Brand Guide Button - Desktop -->
+                <div class="about__button-wrapper">
+                    <a href="https://drive.google.com/file/d/1xaDZXW-yWYZmj5l6FRmx7Ba8-J0gvWXt/preview" target="_blank" rel="noopener noreferrer" class="btn-3d btn-3d--dark about__button">
+                        <div class="btn-3d__shadow"></div>
+                        <div class="btn-3d__content">
+                            <svg class="btn-3d__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                            <span class="btn-3d__text" data-i18n="about.button">Brand Guide</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Group -->
+            <div class="about__right-group">
+                <div class="about__labels">
+                    <span class="about__label about__label--ready" data-i18n="about.label.ready">準備完了</span>
+                    <span class="about__label about__label--stack" data-i18n="about.label.stack">積み重ねる / 待機する</span>
+                </div>
+                
+                <div class="about__title-group">
+                    <h3 class="about__title" data-i18n="about.title.standby">Stand by Cue!</h3>
+                    <img src="./assets/Que_Plus.svg" alt="+" class="about__plus">
+                    <h3 class="about__title about__title--right" data-i18n="about.title.queue">Queue</h3>
+                </div>
+                
+                <div class="about__description-wrapper">
+                    <p class="about__description" data-i18n="about.description">
+                        私たちの名前は、「Queue（積み重ねる、列に並ぶ）」に<br>
+                        由来しています。<br>
+                        <br>
+                        <strong>オンラインとオフラインに散らばった、あなたの無数の記録たち。</strong><br>
+                        私たちはその複雑な断片を一つひとつ積み重ね（Queue）、<br>
+                        「私」という一つの鮮明な文脈を作り上げます。<br>
+                        <br>
+                        そしてそのデータの中から、<br>
+                        あなたに必要な選択肢を一足先に選び出します。<br>
+                        複雑な整理と計算は、私たちが済ませておきました。<br>
+                        あとは、鮮明になった優先順位を見て、<br>
+                        あなただけの「流れ」を設計するだけです。<br>
+                        <br>
+                        3...2...1...<br>
+                        Stand by Que!
+                    </p>
+                </div>
+                
+                <!-- Brand Guide Button - Mobile/Tablet only -->
+                <div class="about__button-wrapper about__button-wrapper--mobile">
+                    <a href="https://drive.google.com/file/d/1xaDZXW-yWYZmj5l6FRmx7Ba8-J0gvWXt/preview" target="_blank" rel="noopener noreferrer" class="btn-3d btn-3d--dark about__button">
+                        <div class="btn-3d__shadow"></div>
+                        <div class="btn-3d__content">
+                            <svg class="btn-3d__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                            <span class="btn-3d__text" data-i18n="about.button">Brand Guide</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Star Icon -->
+                <div class="about__star">
+                    <img src="./assets/logo.png" alt="Star" class="about__star-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER BANNER
+    ========================================= -->
+    <section class="footer-banner" id="footer-banner">
+        <div class="footer-banner__content">
+            <p class="footer-banner__text" data-i18n="footer.text">消費した時間を、<br>より価値ある時間へと<br>変えたいなら、</p>
+            <div class="footer-banner__action">
+                <span class="footer-banner__standby" data-i18n="footer.standby">Stand by</span>
+                <a href="#" class="btn-3d btn-3d--light footer-banner__btn">
+                    <div class=".btn-3d--light .btn-3d__shadow"></div>
+                    <div class="btn-3d__content">
+                        <svg class="btn-3d__icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                        </svg>
+                        <span class="btn-3d__text" data-i18n="hero.appStore">App Store</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         DESIGN SYSTEM
+    ========================================= -->
+    <section class="design-system" id="design-system">
+        <div class="design-system__container">
+            
+            <!-- Header: Title + Button -->
+            <div class="design-system__header">
+                <h2 class="design-system__title">
+                    We’re<br>
+                    <strong>Design System</strong>
+                </h2>
+                <a href="#" class="btn-3d btn-3d--dark design-system__btn">
+                    <div class="btn-3d__shadow"></div>
+                    <div class="btn-3d__content">
+                        <svg class="btn-3d__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                        <span class="btn-3d__text">Go to See</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Visual Elements Grid -->
+            <div class="design-system__visuals">
+                <div class="design-system__scroll-track">
+                    <img src="assets/DesignSystem_Component.png" alt="Design System Components" class="design-system__image">
+                    <img src="assets/DesignSystem_Component.png" alt="Design System Components" class="design-system__image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
